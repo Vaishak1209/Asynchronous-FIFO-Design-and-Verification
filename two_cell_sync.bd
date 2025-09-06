@@ -1,0 +1,124 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x75BB52B423C91736",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../fifo.gen/sources_1/bd/two_cell_sync",
+      "name": "two_cell_sync",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xpm_cdc_gen_0": ""
+    },
+    "ports": {
+      "src_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "two_cell_sync_src_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "200000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "dest_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "two_cell_sync_dest_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "src_in": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "dest_out": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "xpm_cdc_gen_0": {
+        "vlnv": "xilinx.com:ip:xpm_cdc_gen:1.0",
+        "xci_name": "two_cell_sync_xpm_cdc_gen_0_0",
+        "xci_path": "ip\\two_cell_sync_xpm_cdc_gen_0_0\\two_cell_sync_xpm_cdc_gen_0_0.xci",
+        "inst_hier_path": "xpm_cdc_gen_0",
+        "parameters": {
+          "CDC_TYPE": {
+            "value": "xpm_cdc_array_single"
+          },
+          "DEST_SYNC_FF": {
+            "value": "2"
+          },
+          "WIDTH": {
+            "value": "8"
+          }
+        }
+      }
+    },
+    "nets": {
+      "dest_clk_1": {
+        "ports": [
+          "dest_clk",
+          "xpm_cdc_gen_0/dest_clk"
+        ]
+      },
+      "src_clk_1": {
+        "ports": [
+          "src_clk",
+          "xpm_cdc_gen_0/src_clk"
+        ]
+      },
+      "src_in_1": {
+        "ports": [
+          "src_in",
+          "xpm_cdc_gen_0/src_in"
+        ]
+      },
+      "xpm_cdc_gen_0_dest_out": {
+        "ports": [
+          "xpm_cdc_gen_0/dest_out",
+          "dest_out"
+        ]
+      }
+    }
+  }
+}
