@@ -1,0 +1,1 @@
+Project contains a 64x8 (parametrizable) asynchronous FIFO using inbuilt xpm macro cdc tool within Xilinx-Vivado, and also a verification testbench using scoreboard architecture to validate FIFO functionality.
